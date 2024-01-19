@@ -1,8 +1,8 @@
 export const Registration = () => {
   return (
-    <div className="main m-auto">
-      <div className="part1">
-        <h1>Welcome TO The </h1>
+    <div className="main m-auto w-full">
+      <div className="part1 flex mx-20">
+        <h1>Welcome  </h1>
       </div>
       <div className="part2">
         <label>Name</label>
