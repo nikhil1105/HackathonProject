@@ -1,7 +1,17 @@
+import {  } from "module";
+import { BrowserRouter,Routes , Route } from "react-router-dom";
+import Landing from "./componenets/landing";
+
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <>
+    <BrowserRouter>
+      <Routes>
+        <Route path="landing" element={<Landing/>}/>
+
+      </Routes>
+    </BrowserRouter>
+    
+    </>
   )
 }
