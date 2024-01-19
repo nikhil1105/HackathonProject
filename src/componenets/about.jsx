@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <div className='box1  flex items-center landing-main h-[100vh] w-[100vw]'>
-      Welcome to about page
+        <h1 className="mt-12 ml-12">Welcome</h1>
     </div>
   )
 }
