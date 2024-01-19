@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,33 +11,33 @@ const Nav = () => {
   return (
     <header className='padding-x py-8 absolute z-10 w-full'>
       <nav className='flex justify-between items-center max-container'>
-        <a href="/" className='ml-4 font-bold text-blue-700'>
+        <Link href="/" className='ml-4 font-bold text-blue-700'>
           Logo
-        </a>
+        </Link>
         <div className={`lg:flex flex justify-center items-center gap-16 mr-20 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
           <div>
-            <a
+            <Link
               href="/"
               className='font-montserrat leading-normal text-lg text-blue-600 font-bold hover:text-white'
             >
               Home
-            </a>
+            </Link>
           </div>
           <div>
-            <a
-              href="/"
+            <Link
+              to="about"
               className='font-montserrat leading-normal text-lg text-blue-600 font-bold hover:text-white' 
             >
               About
-            </a>
+            </Link>
           </div>
           <div>
-            <a
+            <Link
               href="/"
               className='font-montserrat leading-normal text-lg text-blue-600 font-bold hover:text-white'
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
         <div className='lg:hidden'>
