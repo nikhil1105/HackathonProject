@@ -1,46 +1,63 @@
+import { useState } from "react";
+
 export const Registration = () => {
+  const [name,setname]=useState()
+  const [lname,setlname]=useState()
+  const [num,setnum]=useState()
+  const [email,setemail]=useState()
+  const [age,setage]=useState()
+  const [adic,setadic]=useState()
+
+
+  function submit(e) {
+    
+  }
+
   return (
-    <div className="main m-auto w-full">
-      <div className="part1 flex mx-20">
-        <h1>Welcome  </h1>
+    <div className="main  w-[100vw] bg-cyan-300 h-[100vh]">
+      <div className="part1 text-[40px] text-center w-[100vw] my-5">
+        <h1>Welcome</h1>
       </div>
-      <div className="part2">
+      <div className=" bg-white rounded-2xl border border-gray-500 m-6 p-5 w-fit">
+        <form onSubmit={submit}>
         <label>Name</label>
         <br />
-        <input type="text" name="" id="" placeholder="First" />
-        <input type="text" name="" id="" placeholder="Last" />
-        <br />
-        <label>Date of Birth</label>
-        <br />
-        <input type="text" name="" id="" placeholder="MM/DD/YYYY" />
+        <input className=" border-black m-1 " type="text" onChange={(e)=>{setname(e.target.value)}}  placeholder="First" />
+        <input type="text" onChange={(e)=>{setlname(e.target.value)}}  placeholder="Last" />
         <br />
         <label>Contact Phone Number</label>
         <br />
-        <input type="text" name="" id="" placeholder="" />
+        <input type="text" onChange={(e)=>{setnum(e.target.value)}}  placeholder="number" />
+        <br />
+        <label>Your Age</label>
+        <br />
+        <input type="text" onChange={(e)=>{setage(e.target.value)}} placeholder="age" />
         <br />
         <label>Email Address</label>
         <br />
 
-        <input type="text" name="" id="" placeholder="" />
+        <input type="text"  onChange={(e)=>{setemail(e.target.value)}}  placeholder="email" />
         <br />
 
         <label>Type(s) Of Substance(s) Abused</label>
         <br />
 
-        <input type="text" name="" id="" placeholder="" />
+        <select  onChange={(e)=>{setadic(e.target.value)}} >
+        <option value="select">Select</option>
+          <option value="smoking">Smoking Addiction</option>
+          <option value="alcohol">Alcohol Addiction</option>
+          <option value="cocaine">Cocaine Addiction</option>
+          <option value="tobacco">Tobacco Addiction</option>
+          <option value="smoking">Cannabis</option>
+        </select>
         <br />
-        <label >Frequency Of Use</label><br />
-
-<input type="number" name="" id="" placeholder="" /><br />
-<label >Date Of Last Use</label><br />
-
-<input type="text" name="" id="" placeholder="" /><br />
 
 
+        <input className="border-2 border-black rounded-2xl p-2 my-2 bg-black text-white " type="submit"/>
+        </form>
 
 
       </div>
-          
     </div>
   );
 };

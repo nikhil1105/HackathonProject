@@ -9,14 +9,15 @@ export default function App() {
     <>
     <BrowserRouter>
       <Routes>
-
-        <Route path="landing" element={<Landing/>}/>
-        <Route path="register" element={<Registration/>}/>
+        <Route path="/register" element={<Registration/>}/>
         <Route path="*" element={<Landing/>}/>
+<<<<<<< HEAD
+=======
         <Route path="*" element={<Landing/>}/>
         <Route path="about" element={<About/>}/>
         
 
+>>>>>>> 0d698b05424fc80a86360a3831b3d6ce3884f874
       </Routes>
     </BrowserRouter>
     
