@@ -8,13 +8,11 @@ export default function App() {
     <>
     <BrowserRouter>
       <Routes>
-<<<<<<< HEAD
+
         <Route path="landing" element={<Landing/>}/>
         <Route path="register" element={<Registration/>}/>
-=======
         <Route path="*" element={<Landing/>}/>
         <Route path="*" element={<Landing/>}/>
->>>>>>> 1fee1d59ee3dda0bf82b41f070edc32f105dc7a4
 
       </Routes>
     </BrowserRouter>
